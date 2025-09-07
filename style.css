@@ -47,8 +47,8 @@ a {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  align-items: center; /* vertically center content */
-  justify-content: center; /* center horizontally if space left */
+  align-items: center; /* vertically center cards */
+  justify-content: center; /* center horizontally if space allows */
 }
 
 .aboutSection, .nameSection {
@@ -56,21 +56,14 @@ a {
   border: 1px solid #ffb6c1;
   border-radius: 16px;
   padding: 30px;
+  flex: 1 1 300px; /* responsive width */
+  max-width: 500px; /* prevents overstretching */
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.aboutSection {
-  flex: 0 0 220px; /* fixed width for picture section */
   display: flex;
   flex-direction: column;
-  align-items: center; /* center picture and text */
+  align-items: center;
   text-align: center;
-}
-
-.nameSection {
-  flex: 1; /* take remaining space */
-  min-width: 280px;
 }
 
 .aboutSection:hover, .nameSection:hover {
@@ -78,12 +71,17 @@ a {
   box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
-
 .myPic {
   max-width: 200px;
   border-radius: 50%;
   margin-bottom: 20px;
   border: 3px solid #ffb6c1;
+}
+
+.fieldSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers name and role under image */
 }
 
 .fieldName {
@@ -105,11 +103,10 @@ a {
   margin-bottom: 12px;
 }
 
-.nameSection span {
-  display: block;
-  margin-bottom: 10px;
-  line-height: 1.6;
+.nameSection p {
   color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 /* Social Links */
@@ -117,6 +114,7 @@ a {
   display: flex;
   gap: 10px;
   margin: 40px 0;
+  justify-content: center;
 }
 
 .socialLink, .socialEmailLink {
@@ -137,25 +135,18 @@ a {
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
+  justify-content: center;
   margin: 60px 0;
-  justify-content: space-between;
 }
 
 .skillSection {
-  flex: 1;
-  min-width: 250px;
   background-color: #fff0f5;
   border: 1px solid #ffb6c1;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skillSection:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  min-width: 200px;
+  text-align: center;
 }
 
 .skillHeader {
@@ -168,6 +159,7 @@ a {
 .skillNameSection {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -175,62 +167,8 @@ a {
   background-color: #ffb6c1;
   color: #fff;
   padding: 6px 12px;
-  border-radius: 12px;
+  border-radius: 8px;
   font-weight: 600;
-}
-
-/* Experience Section */
-.experience {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin: 60px 0;
-}
-
-.companySection, .experienceSection {
-  background-color: #fff0f5;
-  border: 1px solid #ffb6c1;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.companySection:hover, .experienceSection:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-.experienceHeading {
-  font-size: 24px;
-  font-weight: 700;
-  color: #ff639c;
-  margin-bottom: 12px;
-}
-
-.companyInfo, .companySkills {
-  margin-top: 10px;
-}
-
-.companyName {
-  font-weight: 700;
-  color: #333;
-  display: block;
-}
-
-.companyPeriod {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 6px;
-}
-
-.companySkillName {
-  background-color: #ffb6c1;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-size: 14px;
-  margin-right: 6px;
 }
 
 /* Projects Section */
@@ -278,7 +216,7 @@ a {
 }
 
 .projectLink {
-  width: 20px;
+  width: 20px; 
   height: 20px;
   display: inline-block;
   vertical-align: middle;
@@ -299,54 +237,9 @@ a {
   flex-shrink: 0;
 }
 
-/* Footer */
-.footer {
-  text-align: center;
-  margin: 60px 0 20px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.footerName, .footerRight {
-  display: block;
-  font-weight: 600;
-  color: #333;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .projectItem {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .projectImg {
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .projectHeader {
-    justify-content: center;
-  }
-
-  .projectLink {
-    margin-left: 6px;
-  }
-
-  .skills {
-    justify-content: center;
-  }
-
-  .skillSection {
-    min-width: 100%;
-  }
-}
-
 /* Contact Section */
 .contact {
-  text-align: center; /* center all content */
+  text-align: center;
   margin: 60px 0;
 }
 
@@ -373,10 +266,6 @@ a {
   transform: translateY(-2px);
 }
 
-.contact .pageLinks {
-  margin-top: 10px;
-}
-
 .contact .pageLinks a {
   color: #333;
   font-weight: 600;
@@ -385,4 +274,53 @@ a {
 
 .contact .pageLinks a:hover {
   color: #ff639c;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin: 60px 0 20px 0;
+  font-weight: 600;
+  color: #555;
+}
+
+.footer span {
+  display: block;
+  margin: 4px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .aboutSection, .nameSection {
+    max-width: 100%;
+  }
+
+  .projectItem {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .projectImg {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .projectHeader {
+    justify-content: center;
+  }
+
+  .projectLink {
+    margin-left: 6px;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
 }
