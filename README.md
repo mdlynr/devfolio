@@ -60,7 +60,7 @@ This is a modern, minimal, and visually soft-pink-themed **Portfolio Website** d
 </h3>
 
 <p align="center"> 
-  <a href="https://github.com/Akshatjalan">
+  <a href="https://github.com/mdlynr">
     <img src="https://github.com/Akshatjalan/akshat/blob/master/Color/Github.svg" width="30" height="30" hspace="20">
   </a>
 
