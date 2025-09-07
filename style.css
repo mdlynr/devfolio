@@ -47,8 +47,8 @@ a {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  align-items: center; /* vertically center cards */
-  justify-content: center; /* center horizontally if space allows */
+  align-items: center;
+  justify-content: center;
 }
 
 .aboutSection, .nameSection {
@@ -56,8 +56,8 @@ a {
   border: 1px solid #ffb6c1;
   border-radius: 16px;
   padding: 30px;
-  flex: 1 1 300px; /* responsive width */
-  max-width: 500px; /* prevents overstretching */
+  flex: 1 1 300px;
+  max-width: 500px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
@@ -81,7 +81,7 @@ a {
 .fieldSection {
   display: flex;
   flex-direction: column;
-  align-items: center; /* centers name and role under image */
+  align-items: center;
 }
 
 .fieldName {
@@ -168,6 +168,55 @@ a {
   color: #fff;
   padding: 6px 12px;
   border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Experience Section */
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 60px 0;
+}
+
+.companySection, .experienceSection {
+  background-color: #fff0f5;
+  border: 1px solid #ffb6c1;
+  border-radius: 16px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.companySection:hover, .experienceSection:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.experienceHeading, .experienceName {
+  color: #ff639c;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.companyInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.companySkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.companySkillName {
+  background-color: #ffb6c1;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
   font-weight: 600;
 }
 
@@ -322,5 +371,15 @@ a {
   .skills {
     flex-direction: column;
     align-items: center;
+  }
+
+  /* Experience mobile */
+  .companyInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experienceSection {
+    text-align: left;
   }
 }
