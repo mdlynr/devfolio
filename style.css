@@ -102,7 +102,7 @@ a {
 .socials {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
+  margin: 40px 0;
 }
 
 .socialLink, .socialEmailLink {
@@ -127,16 +127,17 @@ a {
   margin: 60px 0;
 }
 
+/* Each project card */
 .projectItem {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   gap: 20px;
-  padding: 20px;
+  padding: 25px;
   border: 1px solid #ffb6c1;
-  border-radius: 16px;
+  border-radius: 20px;
   background-color: #fff0f5;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -145,7 +146,7 @@ a {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Project Text */
+/* Project text */
 .projectInfo {
   flex: 1;
   min-width: 250px;
@@ -154,7 +155,7 @@ a {
 .projectHeader {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px; /* smaller gap for link arrow */
 }
 
 .projectHeader h4 {
@@ -168,22 +169,25 @@ a {
   font-size: 16px;
   color: #555;
   line-height: 1.6;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
-/* Project Image & Link */
+/* Project Image */
 .projectImg {
-  max-width: 300px;
+  max-width: 280px; /* slightly smaller to prevent overlap */
   width: 100%;
-  border-radius: 12px;
+  border-radius: 16px;
   object-fit: cover;
   flex-shrink: 0;
 }
 
+/* Project Link arrow */
 .projectLink {
-  width: 30px;
-  height: 30px;
-  margin-left: 10px;
+  width: 20px; /* smaller */
+  height: 20px; /* smaller */
+  margin-left: 6px;
+  display: inline-block;
+  vertical-align: middle; /* aligns with project name */
 }
 
 /* Responsive About & Projects */
@@ -203,7 +207,7 @@ a {
   }
 
   .projectItem {
-    flex-direction: column-reverse; /* Text above image */
+    flex-direction: column-reverse; /* text above image */
     text-align: center;
   }
 
