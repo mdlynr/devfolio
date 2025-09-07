@@ -1,244 +1,201 @@
+/* General */
 body {
   margin: 0;
   padding: 0;
-  background-color: #ffeef6; /* Soft pink background */
   font-family: "Inter", sans-serif;
+  background-color: #fff; /* White background */
+  color: #333;
 }
 
-::selection {
-  background-color: #ffb6c1; /* Light pink highlight */
-  color: #fff;
+a {
+  text-decoration: none;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* Container */
 .container {
-  display: flex;
-  flex-direction: column;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 16%;
-  padding-right: 16%;
-  gap: 10px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
-/* NAVBAR SECTION */
-
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffb6c1; /* Soft pink navbar */
-  color: #fff;
-  padding: 16px 40px;
-  border-radius: 44px;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: -0.8px;
-}
-
-.pageLinks {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-  color: #fff;
+  padding: 10px 20px;
 }
 
 .pageLinks a {
-  font-size: 18px;
-  display: flex;
-  color: #fff;
+  margin-left: 20px;
   font-weight: 600;
-  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
 }
 
-.pageLinks :hover {
-  color: #ff69b4; /* Hot pink hover */
-  transition: ease-in-out 0.4s;
-  cursor: pointer;
+.pageLinks a:hover {
+  color: #ffb6c1; /* Soft pink accent */
 }
 
-/* ABOUT SECTION */
-
+/* About */
 .about {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px 0;
 }
 
-.aboutHeading {
-  color: #ff69b4;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  padding-bottom: 20px;
-}
-
-.nameSection {
-  flex-grow: 2;
-  background-color: #ffc0cb; /* Pink card */
-  color: #fff;
-  padding: 40px;
-  border-radius: 20px;
-  font-size: 44px;
-  font-weight: 600;
-  letter-spacing: -2px;
-  width: 400px;
-}
-
-.nameSection span {
-  color: #ff69b4; /* Hot pink highlight */
-}
-
-.aboutSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 40px;
-  background-color: #ffb6c1;
-  color: #fff;
+.aboutSection, .nameSection {
+  background-color: #fff;
+  border: 1px solid #ffb6c1;
+  border-radius: 16px;
   padding: 20px;
-  border-radius: 20px;
-  font-size: 56px;
-  font-weight: 600;
-  letter-spacing: -3px;
+  flex: 1;
 }
 
 .myPic {
-  height: 280px;
-  border-radius: 16px;
+  max-width: 100%;
+  border-radius: 12px;
 }
 
 .fieldName {
-  color: #ffeef6;
-  font-size: 36px;
+  font-size: 28px;
+  font-weight: 700;
 }
 
-/* SKILLS SECTION */
+.fieldRole {
+  font-size: 20px;
+  color: #ffb6c1;
+}
 
-.skills {
+.aboutHeading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffb6c1;
+  margin-bottom: 10px;
+}
+
+/* Socials */
+.socials {
   display: flex;
   gap: 10px;
+  margin: 20px 0;
+}
+
+.socialLink, .socialEmailLink {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #ffb6c1;
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.socialLink:hover, .socialEmailLink:hover {
+  background-color: #ff8da0;
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
 }
 
 .skillSection {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 32px;
-  background-color: #ffb6c1;
-  color: #fff;
-  border-radius: 20px;
-  flex-grow: 1;
+  flex: 1;
+  border: 1px solid #ffb6c1;
+  border-radius: 16px;
+  padding: 20px;
 }
 
 .skillHeader {
-  font-size: 44px;
-  color: #fff;
-  padding-bottom: 20px;
-  font-weight: 600;
-  letter-spacing: -1.4px;
+  color: #ffb6c1;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .skillName {
-  color: #ffeef6;
-  font-size: 36px;
-  font-weight: 600;
-  letter-spacing: -1px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-/* EXPERIENCE SECTION */
+/* Experience */
+.experience {
+  margin-bottom: 40px;
+}
 
-.experienceItem,
-.companySection {
+.companySection, .experienceSection {
+  border: 1px solid #ffb6c1;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.companySkillName {
+  display: inline-block;
   background-color: #ffb6c1;
   color: #fff;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
-.experienceheading {
-  color: #ff69b4;
-}
-
-.experienceName {
-  color: #fff;
-}
-
-.experienceDesc {
-  color: #ffeef6;
-}
-
-/* COMPANY TAGS */
-.companySkillName {
-  background-color: #ff69b4;
-  color: #fff;
-}
-
-/* PROJECTS SECTION */
-
+/* Projects */
 .projects {
-  background-color: #ffc0cb;
-  color: #fff;
+  margin-bottom: 40px;
+}
+
+.projectItem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .projectLink {
-  background-color: #fff;
-  color: #ff69b4;
+  width: 24px;
+  height: 24px;
 }
 
-.projectName {
-  color: #fff;
+.projectImg {
+  max-width: 100%;
+  border-radius: 12px;
 }
 
-.projectDesc {
-  color: #ffeef6;
-}
-
-/* SOCIALS SECTION */
-
-.socialLink {
-  background-color: #ffb6c1;
-  color: #fff;
-}
-.socialLink:hover {
-  background-color: #ff69b4;
-}
-
-.socialEmailLink {
-  background-color: #ff69b4;
-  color: #fff;
-}
-.socialEmailLink:hover {
-  background-color: #cc3d00;
-}
-
-/* CONTACT SECTION */
-
+/* Contact */
 .contact {
-  background-color: #ffc0cb;
-  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .contactButton {
-  background-color: #ff69b4;
-}
-.contactButton:hover {
-  background-color: #e75480;
-}
-
-.contactButton button {
-  color: #fff;
-}
-
-/* FOOTER SECTION */
-
-.footer {
+  display: inline-block;
+  padding: 12px 20px;
   background-color: #ffb6c1;
   color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
 }
-.footerRight {
-  color: #ffeef6;
+
+.contactButton:hover {
+  background-color: #ff8da0;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-top: 1px solid #ffb6c1;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .about { flex-direction: column; }
+  .skills, .projectItem { flex-direction: column; }
 }

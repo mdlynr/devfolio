@@ -3,207 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Meta tags for social media sharing -->
-    <meta property="og:title" content="Madelyn Rocha - Portfolio" />
-    <meta
-      property="og:description"
-      content="Personal portfolio showcasing my skills, experience, and projects in computer engineering and development."
-    />
-    <meta property="og:image" content="images/preview.png" />
-    <meta property="og:url" content="https://mdlynr.github.io/" />
-
-    <!-- Fallback for non-social media platforms -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Madelyn Rocha - Portfolio" />
-    <meta
-      name="twitter:description"
-      content="Portfolio highlighting my projects, skills, and experience in computer engineering."
-    />
-    <meta name="twitter:image" content="images/preview.png" />
-
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <title>Madelyn Rocha - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap"
       rel="stylesheet"
     />
-
-    <title>Madelyn Rocha - Portfolio</title>
+    <link rel="icon" href="images/favicon.ico" />
   </head>
   <body>
     <div class="container">
       <!-- Navigation -->
-      <div class="navbar">
+      <nav class="navbar">
         <div class="nameLink">Portfolio</div>
         <div class="pageLinks">
-          <a href="#skills">skills</a>
-          <a href="#experience">experience</a>
-          <a href="#projects">projects</a>
-          <a href="#contact">contact</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
-      </div>
+      </nav>
 
       <!-- About Section -->
-      <div class="about">
+      <section class="about">
         <div class="aboutSection">
-          <img class="myPic" alt="photo" src="images/MyPic.png" />
+          <img class="myPic" src="images/MyPic.png" alt="Madelyn Rocha" />
           <div class="fieldSection">
-            <div>Diamante Lopez</div>
-            <div class="fieldName">Computer Engineering Student</div>
+            <div class="fieldName">Madelyn Rocha</div>
+            <div class="fieldRole">Computer Engineering Student</div>
           </div>
         </div>
         <div class="nameSection">
           <div class="aboutHeading">ABOUT</div>
-          <span>
-            I am a passionate Computer Engineering student with a growing
-            interest in embedded systems, IoT, and software development.
-            </span>
-          <span>
-            Currently working on projects that combine hardware and software
-            solutions to solve real-world problems.
-          </span>
+          <p>
+            Passionate Computer Engineering student with interests in embedded systems, IoT, and software development.
+          </p>
+          <p>
+            Working on projects that combine hardware and software solutions to solve real-world problems.
+          </p>
         </div>
-      </div>
+      </section>
 
       <!-- Social Links -->
-      <div class="socials">
-        <a class="socialEmailLink" href="mailto:madelynrocha13@gmail.com">email.</a>
-        <a class="socialLink" href="MadieCV.pdf" download>resume.</a>
-        <a
-          class="socialLink"
-          href="https://www.linkedin.com/in/mdlynr"
-          target="_blank"
-          >linkedIn.</a
-        >
-        <a
-          class="socialLink"
-          href="https://github.com/mdlynr"
-          target="_blank"
-          >github.</a
-        >
-      </div>
+      <section class="socials">
+        <a class="socialEmailLink" href="mailto:madelynrocha13@gmail.com">Email</a>
+        <a class="socialLink" href="MadieCV.pdf" download>Resume</a>
+        <a class="socialLink" href="https://www.linkedin.com/in/mdlynr" target="_blank">LinkedIn</a>
+        <a class="socialLink" href="https://github.com/mdlynr" target="_blank">GitHub</a>
+      </section>
 
       <!-- Skills -->
-      <div class="skills" id="skills">
+      <section class="skills" id="skills">
         <div class="skillSection" id="front">
-          <div class="skillHeader">Frontend.</div>
+          <h3 class="skillHeader">Frontend</h3>
           <div class="skillNameSection">
-            <div class="skillName">HTML & CSS</div>
-            <div class="skillName">JavaScript</div>
-            <div class="skillName">React</div>
+            <span class="skillName">HTML & CSS</span>
+            <span class="skillName">JavaScript</span>
+            <span class="skillName">React</span>
           </div>
         </div>
         <div class="skillSection" id="back">
-          <div class="skillHeader">Backend.</div>
+          <h3 class="skillHeader">Backend</h3>
           <div class="skillNameSection">
-            <div class="skillName">NodeJS</div>
-            <div class="skillName">ExpressJS</div>
-            <div class="skillName">Firebase</div>
+            <span class="skillName">NodeJS</span>
+            <span class="skillName">ExpressJS</span>
+            <span class="skillName">Firebase</span>
           </div>
         </div>
         <div class="skillSection" id="lang">
-          <div class="skillHeader">Languages.</div>
+          <h3 class="skillHeader">Languages</h3>
           <div class="skillNameSection">
-            <div class="skillName">C/C++</div>
-            <div class="skillName">Python</div>
-            <div class="skillName">Java</div>
+            <span class="skillName">C/C++</span>
+            <span class="skillName">Python</span>
+            <span class="skillName">Java</span>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Experience -->
-      <div class="experience" id="experience">
+      <section class="experience" id="experience">
         <div class="companySection">
-          <div class="experienceheading">EXPERIENCE</div>
-          <div>
-            <div class="companyName">University Projects</div>
-            <div class="companyPeriod">2023 - Present</div>
+          <h3 class="experienceHeading">Experience</h3>
+          <div class="companyInfo">
+            <span class="companyName">University Projects</span>
+            <span class="companyPeriod">2023 - Present</span>
             <div class="companySkills">
-              <div class="companySkillName">IoT</div>
-              <div class="companySkillName">Arduino</div>
-              <div class="companySkillName">Raspberry Pi</div>
+              <span class="companySkillName">IoT</span>
+              <span class="companySkillName">Arduino</span>
+              <span class="companySkillName">Raspberry Pi</span>
             </div>
           </div>
         </div>
-
         <div class="experienceSection">
-          <div class="experienceItem">
-            <div class="experienceName">Automated Vinegar Fermentation System</div>
-            <div class="experienceDesc">
-              Developed an IoT-enabled automated system for vinegar fermentation
-              using sensors, solenoid valves, and a mobile app for real-time
-              monitoring. This project integrates hardware, cloud, and software
-              to modernize traditional food production.
-            </div>
-          </div>
+          <h4 class="experienceName">Automated Vinegar Fermentation System</h4>
+          <p class="experienceDesc">
+            Developed an IoT-enabled automated system for vinegar fermentation using sensors, solenoid valves, and a mobile app for real-time monitoring. Integrates hardware, cloud, and software to modernize traditional food production.
+          </p>
         </div>
-      </div>
+      </section>
 
       <!-- Projects -->
-      <div class="projects" id="projects">
-        <div class="projectHeader">
+      <section class="projects" id="projects">
+        <div class="projectItem">
           <div>
-            <div class="aboutHeading">PROJECTS</div>
-            <div class="projectName">CocoTech App.</div>
-            <div class="projectDesc">
-              A mobile app built with Flutter that connects to an IoT-based
-              fermentation system, providing real-time monitoring, graphs, and
-              alerts for vinegar production.
-            </div>
+            <h4 class="projectName">CocoTech App</h4>
+            <p class="projectDesc">A Flutter mobile app connected to an IoT-based fermentation system, providing real-time monitoring, graphs, and alerts.</p>
           </div>
           <a href="https://github.com/mdlynr/cocovine_app" target="_blank">
             <img class="projectLink" src="images/linkArrow.png" alt="link" />
           </a>
+          <a href="https://github.com/mdlynr/cocovine_app" target="_blank">
+            <img class="projectImg" src="images/project1.png" alt="CocoVine App" />
+          </a>
         </div>
-        <a href="https://github.com/yourgithub/cocovine_app" target="_blank">
-          <img
-            class="projectImg"
-            src="images/project1.png"
-            alt="CocoVine App"
-          />
-        </a>
-      </div>
 
-      <div class="projects">
-        <div class="projectHeader">
+        <div class="projectItem">
           <div>
-            <div class="projectName">Smart Home System.</div>
-            <div class="projectDesc">
-              A prototype IoT smart home project with Arduino and ESP32,
-              featuring temperature monitoring, automated lighting, and mobile
-              notifications.
-            </div>
+            <h4 class="projectName">Smart Home System</h4>
+            <p class="projectDesc">Prototype IoT smart home project with Arduino and ESP32, featuring temperature monitoring, automated lighting, and mobile notifications.</p>
           </div>
           <a href="https://github.com/yourgithub/smarthome" target="_blank">
             <img class="projectLink" src="images/linkArrow.png" alt="link" />
           </a>
+          <a href="https://github.com/yourgithub/smarthome" target="_blank">
+            <img class="projectImg" src="images/project2.png" alt="Smart Home" />
+          </a>
         </div>
-        <a href="https://github.com/yourgithub/smarthome" target="_blank">
-          <img
-            class="projectImg"
-            src="images/project2.png"
-            alt="Smart Home"
-          />
-        </a>
-      </div>
+      </section>
 
       <!-- Contact -->
-      <div class="contact" id="contact">
-        <div class="contactName">Let's get started.</div>
-        <a class="contactButton" href="mailto:madelynrocha13@gmail.com">
-          <button>madelynrocha13@gmail.com</button>
-        </a>
+      <section class="contact" id="contact">
+        <h3 class="contactHeading">Let's Get Started</h3>
+        <a href="mailto:madelynrocha13@gmail.com" class="contactButton">madelynrocha13@gmail.com</a>
         <div class="pageLinks"><a href="#">Back to Top</a></div>
-      </div>
+      </section>
 
       <!-- Footer -->
-      <div class="footer">
-        <div class="nameLink">Diamante Lopez.</div>
-        <div class="footerRight">all rights reserved © 2025</div>
-      </div>
+      <footer class="footer">
+        <span class="footerName">Madelyn Rocha</span>
+        <span class="footerRight">All rights reserved © 2025</span>
+      </footer>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
