@@ -47,6 +47,8 @@ a {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  align-items: center; /* vertically center content */
+  justify-content: center; /* center horizontally if space left */
 }
 
 .aboutSection, .nameSection {
@@ -54,16 +56,28 @@ a {
   border: 1px solid #ffb6c1;
   border-radius: 16px;
   padding: 30px;
-  flex: 1;
-  min-width: 280px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.aboutSection {
+  flex: 0 0 220px; /* fixed width for picture section */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center picture and text */
+  text-align: center;
+}
+
+.nameSection {
+  flex: 1; /* take remaining space */
+  min-width: 280px;
 }
 
 .aboutSection:hover, .nameSection:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
+
 
 .myPic {
   max-width: 200px;
@@ -328,4 +342,47 @@ a {
   .skillSection {
     min-width: 100%;
   }
+}
+
+/* Contact Section */
+.contact {
+  text-align: center; /* center all content */
+  margin: 60px 0;
+}
+
+.contactHeading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff639c;
+  margin-bottom: 20px;
+}
+
+.contactButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ffb6c1;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.contactButton:hover {
+  background-color: #ff8da0;
+  transform: translateY(-2px);
+}
+
+.contact .pageLinks {
+  margin-top: 10px;
+}
+
+.contact .pageLinks a {
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.contact .pageLinks a:hover {
+  color: #ff639c;
 }
